@@ -5,5 +5,5 @@ language:
   - cpp
   
 script:
-  - qmake
+  - qmake CI-test.pro
   - make
