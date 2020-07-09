@@ -12,6 +12,7 @@ before_install:
 script:
   - qmake CI-test.pro
   - make
+  - ./get_code_cov.sh
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
