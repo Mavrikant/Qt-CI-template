@@ -12,6 +12,7 @@ before_install:
 script:
   - qmake CI-test.pro
   - make
+  - chmod +x get_code_cov.sh
   - ./get_code_cov.sh
   
 after_success:
