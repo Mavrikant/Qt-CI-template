@@ -6,13 +6,14 @@ language:
   
 before_install:
   - sudo apt-get update -qq
-  - sudo pip install codecov
   - sudo apt-get install devscripts build-essential lintian dh-make
   - sudo apt-get install qtdeclarative5-dev qt5-default libjack-jackd2-dev
     
 script:
   - qmake CI-test.pro
   - make
+  - chmod +x CI-test
+  - ./CI-test
   - chmod +x get_code_cov.sh
   - ./get_code_cov.sh
   
