@@ -6,6 +6,7 @@ language:
   
 before_install:
   - sudo apt-get update -qq
+  - sudo pip install codecov
   - sudo apt-get install devscripts build-essential lintian dh-make
   - sudo apt-get install qtdeclarative5-dev qt5-default libjack-jackd2-dev
     
